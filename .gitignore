@@ -1,0 +1,54 @@
+# Virtual environments -- never portable. A venv hardcodes absolute
+# interpreter paths in pyvenv.cfg and in every Scripts/*.exe shim, so a copied
+# one points at a Python that does not exist on the next machine.
+.venv/
+.venv-build/
+venv/
+env/
+
+# PyInstaller output: ~40MB of bundled interpreter, rebuilt by
+# install/build_exe.ps1 in about a minute.
+build/
+dist/
+*.spec
+
+# Python bytecode, stamped with the source path and interpreter version.
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Test and tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Runtime state. snapshot.json holds real usage numbers and notif_state.json
+# tracks which alerts have fired -- both are per-machine, neither belongs here.
+*.log
+snapshot.json
+state.json
+notif_state.json
+refresh.request
+raw/
+
+# Credentials. Not written here by anything in this project, and listed anyway
+# because an ignore file is also a statement of intent: the OAuth token this
+# app reads must never reach a commit.
+.credentials.json
+.claude.json
+*.credentials
+*.token
+
+# Editors and OS
+.idea/
+.vscode/
+*.swp
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Release artifacts, which are attached to GitHub Releases rather than committed
+*.zip
+clausage_bar.exe

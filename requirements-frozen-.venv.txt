@@ -1,0 +1,24 @@
+# Pinned versions of the set this app was developed and tested against.
+# Python 3.13 (read via pip freeze).
+#
+# Recreate with:  python -m venv .venv
+#                 .\.venv\Scripts\Activate.ps1
+#                 pip install -r requirements-frozen-.venv.txt
+
+certifi==2026.7.22
+charset-normalizer==3.5.1
+colorama==0.4.6
+idna==3.19
+iniconfig==2.3.0
+packaging==26.3
+pillow==12.3.0
+pluggy==1.6.0
+Pygments==2.21.0
+pystray==0.19.5
+pytest==9.1.1
+PyYAML==6.0.3
+requests==2.34.2
+responses==0.26.3
+six==1.17.0
+urllib3==2.7.0
+winotify==1.1.0
